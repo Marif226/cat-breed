@@ -46,6 +46,12 @@ func main() {
 			countryBreed[b.Country] = &breed
 		}
 	}
+
+	// Create directory for result
+	err = os.MkdirAll("data", os.ModePerm)
+	if err != nil {
+		log.Fatalf("error creating directory: %v", err)
+	}
 	
 	// Create result file
 	file, err := os.Create("data/out.json")
