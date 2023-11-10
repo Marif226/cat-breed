@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"sort"
 
 	"github.com/Marif226/cat-breed/internal/model"
 )
@@ -27,6 +28,12 @@ func main() {
 
 	breeds := apiResp.Data
 
+	// Sort data by breed name length
+	sort.Slice(breeds, func(i, j int) bool {
+		return len(breeds[i].Name) < len(breeds[j].Name)
+	})
+
+
 	// Group data by country
 	countryBreed := make(map[string]*model.BreedList)
 	for _, b := range breeds {
@@ -39,7 +46,7 @@ func main() {
 			countryBreed[b.Country] = &breed
 		}
 	}
-
+	
 	file, err := os.Create("data/out.json")
 	if err != nil {
 		log.Fatal("error creating file: ", err)
