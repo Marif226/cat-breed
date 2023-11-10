@@ -47,16 +47,19 @@ func main() {
 		}
 	}
 	
+	// Create result file
 	file, err := os.Create("data/out.json")
 	if err != nil {
 		log.Fatal("error creating file: ", err)
 	}
 
+	// Marshal data with indentation
 	data, err := json.MarshalIndent(countryBreed, "", "\t")
     if err != nil {
         log.Fatal("error marshalling data:", err)
     }
 
+	// Write data to file
 	_, err = file.Write(data)
 	if err != nil {
 		log.Fatal("error writing result to file: ", err)
