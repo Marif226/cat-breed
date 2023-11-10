@@ -1,1 +1,167 @@
-[{"breed":"Abyssinian","country":"Ethiopia"},{"breed":"Aegean","country":"Greece"},{"breed":"American Curl","country":"United States"},{"breed":"American Bobtail","country":"United States"},{"breed":"American Shorthair","country":"United States"},{"breed":"American Wirehair","country":"United States"},{"breed":"Arabian Mau","country":"Arabian Peninsula"},{"breed":"Australian Mist","country":"Australia"},{"breed":"Asian","country":"developed in the United Kingdom (founding stock from Asia)"},{"breed":"Asian Semi-longhair","country":"United Kingdom"},{"breed":"Balinese","country":"developed in the United States (founding stock from Thailand)"},{"breed":"Bambino","country":"United States"},{"breed":"Bengal","country":"developed in the United States (founding stock from Asia)"},{"breed":"Birman","country":"developed in France (founding stock from Burma)"},{"breed":"Bombay","country":"developed in the United States (founding stock from Asia)"},{"breed":"Brazilian Shorthair","country":"Brazil"},{"breed":"British Semi-longhair","country":"United Kingdom"},{"breed":"British Shorthair","country":"United Kingdom"},{"breed":"British Longhair","country":"United Kingdom"},{"breed":"Burmese","country":"Burma and Thailand"},{"breed":"Burmilla","country":"United Kingdom"},{"breed":"California Spangled","country":"United States"},{"breed":"Chantilly-Tiffany","country":"United States"},{"breed":"Chartreux","country":"France"},{"breed":"Chausie","country":"France"}]
+{
+	"Arabian Peninsula": {
+		"country": "Arabian Peninsula",
+		"data": [
+			{
+				"breed": "Arabian Mau",
+				"country": "Arabian Peninsula"
+			}
+		]
+	},
+	"Australia": {
+		"country": "Australia",
+		"data": [
+			{
+				"breed": "Australian Mist",
+				"country": "Australia"
+			}
+		]
+	},
+	"Brazil": {
+		"country": "Brazil",
+		"data": [
+			{
+				"breed": "Brazilian Shorthair",
+				"country": "Brazil"
+			}
+		]
+	},
+	"Burma and Thailand": {
+		"country": "Burma and Thailand",
+		"data": [
+			{
+				"breed": "Burmese",
+				"country": "Burma and Thailand"
+			}
+		]
+	},
+	"Ethiopia": {
+		"country": "Ethiopia",
+		"data": [
+			{
+				"breed": "Abyssinian",
+				"country": "Ethiopia"
+			}
+		]
+	},
+	"France": {
+		"country": "France",
+		"data": [
+			{
+				"breed": "Chausie",
+				"country": "France"
+			},
+			{
+				"breed": "Chartreux",
+				"country": "France"
+			}
+		]
+	},
+	"Greece": {
+		"country": "Greece",
+		"data": [
+			{
+				"breed": "Aegean",
+				"country": "Greece"
+			}
+		]
+	},
+	"United Kingdom": {
+		"country": "United Kingdom",
+		"data": [
+			{
+				"breed": "Burmilla",
+				"country": "United Kingdom"
+			},
+			{
+				"breed": "British Longhair",
+				"country": "United Kingdom"
+			},
+			{
+				"breed": "British Shorthair",
+				"country": "United Kingdom"
+			},
+			{
+				"breed": "Asian Semi-longhair",
+				"country": "United Kingdom"
+			},
+			{
+				"breed": "British Semi-longhair",
+				"country": "United Kingdom"
+			}
+		]
+	},
+	"United States": {
+		"country": "United States",
+		"data": [
+			{
+				"breed": "Bambino",
+				"country": "United States"
+			},
+			{
+				"breed": "American Curl",
+				"country": "United States"
+			},
+			{
+				"breed": "American Bobtail",
+				"country": "United States"
+			},
+			{
+				"breed": "American Wirehair",
+				"country": "United States"
+			},
+			{
+				"breed": "Chantilly-Tiffany",
+				"country": "United States"
+			},
+			{
+				"breed": "American Shorthair",
+				"country": "United States"
+			},
+			{
+				"breed": "California Spangled",
+				"country": "United States"
+			}
+		]
+	},
+	"developed in France (founding stock from Burma)": {
+		"country": "developed in France (founding stock from Burma)",
+		"data": [
+			{
+				"breed": "Birman",
+				"country": "developed in France (founding stock from Burma)"
+			}
+		]
+	},
+	"developed in the United Kingdom (founding stock from Asia)": {
+		"country": "developed in the United Kingdom (founding stock from Asia)",
+		"data": [
+			{
+				"breed": "Asian",
+				"country": "developed in the United Kingdom (founding stock from Asia)"
+			}
+		]
+	},
+	"developed in the United States (founding stock from Asia)": {
+		"country": "developed in the United States (founding stock from Asia)",
+		"data": [
+			{
+				"breed": "Bengal",
+				"country": "developed in the United States (founding stock from Asia)"
+			},
+			{
+				"breed": "Bombay",
+				"country": "developed in the United States (founding stock from Asia)"
+			}
+		]
+	},
+	"developed in the United States (founding stock from Thailand)": {
+		"country": "developed in the United States (founding stock from Thailand)",
+		"data": [
+			{
+				"breed": "Balinese",
+				"country": "developed in the United States (founding stock from Thailand)"
+			}
+		]
+	}
+}
