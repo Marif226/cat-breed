@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"os"
 	"sort"
-
 	"github.com/Marif226/cat-breed/internal/model"
+	"github.com/Marif226/cat-breed/internal/utils"
 )
 
 func main() {
@@ -33,19 +33,9 @@ func main() {
 		return len(breeds[i].Name) < len(breeds[j].Name)
 	})
 
-
 	// Group data by country
-	countryBreed := make(map[string]*model.BreedList)
-	for _, b := range breeds {
-		if _, ok := countryBreed[b.Country]; ok {
-			countryBreed[b.Country].Data = append(countryBreed[b.Country].Data, b)
-		} else {
-			breed := model.BreedList{}
-			breed.Country = b.Country
-			breed.Data = append(breed.Data, b)
-			countryBreed[b.Country] = &breed
-		}
-	}
+	countryBreed := utils.GroupBreedByCountry(breeds)
+	
 
 	// Create directory for result
 	err = os.MkdirAll("data", os.ModePerm)
