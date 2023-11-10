@@ -53,6 +53,8 @@ func main() {
 		log.Fatal("error creating file: ", err)
 	}
 
+	defer file.Close()
+
 	// Marshal data with indentation
 	data, err := json.MarshalIndent(countryBreed, "", "\t")
     if err != nil {
