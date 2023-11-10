@@ -14,7 +14,7 @@ func main() {
 	// Get the list of cat breeds from the API
 	response, err := http.Get("https://catfact.ninja/breeds")
 	if err != nil {
-		log.Fatal("error during calling the API: ", err)
+		log.Fatalf("error during calling the API: %v", err)
 	}
 
 	defer response.Body.Close()
@@ -23,7 +23,7 @@ func main() {
 	var apiResp model.APIResponse
 	err = json.NewDecoder(response.Body).Decode(&apiResp)
 	if err != nil {
-		log.Fatal("error during decoding response: ", err)
+		log.Fatalf("error during decoding response: %v", err)
 	}
 
 	breeds := apiResp.Data
@@ -50,7 +50,7 @@ func main() {
 	// Create result file
 	file, err := os.Create("data/out.json")
 	if err != nil {
-		log.Fatal("error creating file: ", err)
+		log.Fatalf("error creating file: %v", err)
 	}
 
 	defer file.Close()
@@ -58,13 +58,13 @@ func main() {
 	// Marshal data with indentation
 	data, err := json.MarshalIndent(countryBreed, "", "\t")
     if err != nil {
-        log.Fatal("error marshalling data:", err)
+        log.Fatalf("error marshalling data: %v", err)
     }
 
 	// Write data to file
 	_, err = file.Write(data)
 	if err != nil {
-		log.Fatal("error writing result to file: ", err)
+		log.Fatalf("error writing result to file: %v", err)
 	}
 
 	log.Println("successfully wrote the JSON data to out.json.")
