@@ -27,13 +27,30 @@ func main() {
 
 	breeds := apiResp.Data
 
+	// Group data by country
+	countryBreed := make(map[string]*model.BreedList)
+	for _, b := range breeds {
+		if _, ok := countryBreed[b.Country]; ok {
+			countryBreed[b.Country].Data = append(countryBreed[b.Country].Data, b)
+		} else {
+			breed := model.BreedList{}
+			breed.Country = b.Country
+			breed.Data = append(breed.Data, b)
+			countryBreed[b.Country] = &breed
+		}
+	}
+
 	file, err := os.Create("data/out.json")
 	if err != nil {
 		log.Fatal("error creating file: ", err)
 	}
 
-	encoder := json.NewEncoder(file)
-	err = encoder.Encode(breeds)
+	data, err := json.MarshalIndent(countryBreed, "", "\t")
+    if err != nil {
+        log.Fatal("error marshalling data:", err)
+    }
+
+	_, err = file.Write(data)
 	if err != nil {
 		log.Fatal("error writing result to file: ", err)
 	}
